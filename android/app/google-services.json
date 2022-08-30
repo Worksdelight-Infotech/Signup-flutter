@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:943512596213:android:2031b30fae1118971c9fbc",
         "android_client_info": {
-          "package_name": "com.app.stasht"
+          "package_name": "com.app.signupproject"
         }
       },
       "oauth_client": [
@@ -34,7 +34,7 @@
               "client_id": "943512596213-3ijeocusv8cvo5gdge9f2d5k0v0m25nk.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.app.stasht2"
+                "bundle_id": "com.app.signupproject2"
               }
             }
           ]

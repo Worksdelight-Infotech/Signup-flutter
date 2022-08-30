@@ -4,7 +4,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:flutter_login_facebook/flutter_login_facebook.dart';
 import 'package:get/get.dart';
 import 'package:stasht/login_signup/domain/user_model.dart';
 import 'package:stasht/utils/constants.dart';
@@ -23,12 +22,6 @@ class SignupController extends GetxController {
 
   TextEditingController email1Controller = TextEditingController();
   TextEditingController password1Controller = TextEditingController();
-
-  FacebookAccessToken? _token;
-  FacebookUserProfile? _profile;
-  String? _email;
-  String? _imageUrl;
-  final plugin = FacebookLogin(debug: true);
   bool? _isLogged;
   bool _fetching = false;
 
@@ -44,11 +37,6 @@ class SignupController extends GetxController {
         fromFirestore: (snapshots, _) => UserModel.fromJson(snapshots.data()!),
         toFirestore: (movie, _) => movie.toJson(),
       );
-  @override
-  void onInit() {
-    super.onInit();
-    _init();
-  }
 
   void checkEmailExists() {
     print('checkEmailExists');
@@ -172,10 +160,6 @@ class SignupController extends GetxController {
         });
   }
 
-// Initialize Facebook
-  void _init() async {
-    _isLogged = plugin.accessToken != null;
-  }
 
   void saveSession(String _userId, String _userName, String _userEmail,
       String _userImage, int _notificationCount) {

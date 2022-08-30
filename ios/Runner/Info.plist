@@ -22,33 +22,8 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>Bundle Id</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.app.stasht2</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb309756814662949</string>
-			</array>
-		</dict>
-	</array>
-	<key>CFBundleVersion</key>
+    <key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>FacebookAppID</key>
-	<string>309756814662949</string>
-	<key>FacebookClientToken</key>
-	<string>f09d1819fcfdf61822fe7f37dad00ec8</string>
-	<key>FacebookDisplayName</key>
-	<string>Stasht</string>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<false/>
 	<key>ITSAppUsesNonExemptEncryption</key>
