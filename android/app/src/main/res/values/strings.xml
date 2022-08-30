@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Stasht</string>
+    <string name="facebook_app_id">309756814662949</string>
+     <string name="fb_login_protocol_scheme">fb309756814662949</string>
+    <string name="facebook_client_token">ba64fb3a5c2a3e94ec0bdfee6ec4b1d8</string>
+</resources>
