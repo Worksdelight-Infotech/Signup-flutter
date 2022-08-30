@@ -6,13 +6,15 @@
 
 - Getx has been used in this project for state Management
 
+- Code structure
+
 # Development Setup
 
 Clone the repository and run the following commands:
 
-flutter pub get
+- flutter pub get
 
-flutter run
+- flutter run
 
 # App Design
 
