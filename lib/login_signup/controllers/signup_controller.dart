@@ -9,7 +9,6 @@ import 'package:stasht/login_signup/domain/user_model.dart';
 import 'package:stasht/utils/constants.dart';
 
 class SignupController extends GetxController {
-  // var facebookLogin = FacebookLogin();
   final RxBool isObscure = true.obs;
   final RxBool isObscureCP = true.obs;
 
