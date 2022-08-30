@@ -22,5 +22,4 @@ class AppColors {
   static const Color collaboratorBgColor = Color(0XFFE5E4FC);
   static const Color errorColor = Color(0XFFCBA1CF);
   static const Color redBorder = Color(0XFFCC0707);
-  static const Color? redColor = Color?.fromARGB(255, 192, 12, 12);
 }

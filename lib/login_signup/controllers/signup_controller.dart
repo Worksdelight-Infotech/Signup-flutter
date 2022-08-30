@@ -38,6 +38,7 @@ class SignupController extends GetxController {
         toFirestore: (movie, _) => movie.toJson(),
       );
 
+
   void checkEmailExists() {
     print('checkEmailExists');
     usersRef
@@ -85,56 +86,6 @@ class SignupController extends GetxController {
     }
   }
 
-// Signin user to app and save session
-  Future<void> signIn() async {
-    if (formkeySignin.currentState!.validate()) {
-      try {
-        EasyLoading.show(status: 'Processing..');
-        await FirebaseAuth.instance
-            .signInWithEmailAndPassword(
-                email: email1Controller.text.toString().trim(),
-                password: password1Controller.text)
-            .then((value1) {
-          usersRef.where("email", isEqualTo: value1.user!.email).get().then((value) => {
-                    EasyLoading.dismiss(),
-                    if (value.docs.isNotEmpty)
-                      {
-                        Get.snackbar('Success', "User SignIn Successfully",
-                            snackPosition: SnackPosition.BOTTOM, colorText: Colors.white),
-                      }
-                    else
-                      {
-                        Get.snackbar("Error", "Email not exists!",
-                            colorText: Colors.white)
-                      }
-                  });
-        });
-      } on FirebaseAuthException catch (e) {
-        EasyLoading.dismiss();
-        if (e.code == 'user-not-found') {
-          print("User not found");
-          Get.back(result: {"email": email1Controller.text.toString()});
-          Get.snackbar("Error", "User not found, Please signup new user",
-              snackPosition: SnackPosition.BOTTOM, colorText: Colors.white);
-          return Future.error(
-              "User Not Found", StackTrace.fromString("User Not Found"));
-        } else if (e.code == 'wrong-password') {
-          print("Incorrect password");
-          Get.snackbar("Error", "Password is incorrect",
-              snackPosition: SnackPosition.BOTTOM, colorText: Colors.white);
-          return Future.error("Incorrect password",
-              StackTrace.fromString("Incorrect password"));
-        } else {
-          print("Login Failed ${e.message}");
-
-          Get.snackbar("Error", "Login Failed! Please try again in some time",
-              snackPosition: SnackPosition.BOTTOM, colorText: Colors.white);
-          return Future.error(
-              "Login Failed", StackTrace.fromString("Unknown error"));
-        }
-      }
-    }
-  }
 
 //Save user to Firebase
 
@@ -159,6 +110,7 @@ class SignupController extends GetxController {
               snackPosition: SnackPosition.BOTTOM, colorText: Colors.white),
         });
   }
+
 
 
   void saveSession(String _userId, String _userName, String _userEmail,
